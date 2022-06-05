@@ -14,7 +14,7 @@
  function openPage(){
     var x = document.getElementById("search").value
          if (x === "shafna") {
-             window.open("/second.html");
+             window.open("https://s488u.github.io/My-website/second.html");
          }
 }
 
