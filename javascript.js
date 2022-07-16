@@ -1,24 +1,21 @@
 
-//add active class in selected list item 
- let list = document.querySelectorAll('.list');
- for (let i=0; i<list.lenghth; i++){
-    list[i].onclick = function(){
-         let j = 0;
-         while(j < list.lenghth){
-             list[j++].className = 'list'; 
-         }
-         list[i].className = 'list active';
-     }
- }
- 
- function openPage(){
+function closeFunction() {
+    document.getElementById("close").onclick=
+        document.getElementById("disclaimer").style.display = "none";
+    }
+
+
+function openPage(){
     var x = document.getElementById("search").value
-         if (x === "shafna") {
-             window.open("https://s488u.github.io/My-website/second.html");
-         }
-}
+    alert("you are redirecting non-malicious page");
+         if (x === "hashiq"){
+             window.open("/error.html");
+            }else{
+                window.open("https://www.google.com/search?q=" + document.getElementById("search").value);
+            }
+    }
 
-
+ 
 function myFunction(){
     alert("Why are you clicked?");
 }
