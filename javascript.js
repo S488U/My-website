@@ -8,8 +8,8 @@ function closeFunction() {
 function openPage(){
     var x = document.getElementById("search").value
     alert("you are redirecting non-malicious page");
-         if (x === "hashiq"){
-             window.open("/error.html");
+         if (x === "Hashiq"){
+             window.open("https://s488u.github.io/My-website/second.html");
             }else{
                 window.open("https://www.google.com/search?q=" + document.getElementById("search").value);
             }
