@@ -1,4 +1,5 @@
 
+
 function closeFunction() {
     document.getElementById("close").onclick=
         document.getElementById("disclaimer").style.display = "none";
@@ -6,13 +7,37 @@ function closeFunction() {
 
 
 function openPage(){
-    var x = document.getElementById("search").value
-    alert("you are redirecting non-malicious page");
-         if (x === "Hashiq"){
-             window.open("https://s488u.github.io/My-website/second.html");
-            }else{
-                window.open("https://www.google.com/search?q=" + document.getElementById("search").value);
-            }
+    var x = document.getElementById("search").value;
+    
+    switch(x){
+        case "hashiq":
+            window.open("second.html");
+            break;
+        
+        case "youtube":
+            window.open("https://youtube.com/");
+            break;
+        
+        case "google":
+            window.open("https://google.com");
+            break;
+
+        case "":
+            window.open("/error.html");
+            break;
+
+        case "quora":
+            window.open ("https://quora.com");
+            break;
+
+        case "shafna":
+            window.open ("second.html");
+            break;
+
+        default:
+            window.open("https://www.google.com/search?q=" + x );
+            break;
+    }
     }
 
  
@@ -25,8 +50,4 @@ function me(){
 
 
 
-function clickf(){
-    var a = 20;
-    var b = 30;
-    document.write(a + b);
-}
+
