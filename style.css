@@ -34,61 +34,79 @@ header .side-profile .about h3{
     margin-left: 1rem;
     color: #000;
 }
+
+/*/////////// NAVBAR STARTING FROM HERE //////////////////////*/
+
 header .navbar ul {
 	display: flex;
 	flex-direction: row;
 	background-color:transparent;
 	padding: 5px 5px;
 	font-size: 19px;
-    border: 2px solid red;
 }
 
 header .navbar ul li {
     width: max-content;
     margin-right: 15px;
-    border: 2px dotted blue;
-
-   
-
 }
+
 header .navbar ul li a .svgicon{
-    background-color: aqua;
+    position: relative;
+    bottom: -3px;
 }
 
 /*=========== Disclaimer=========*/
 .disclaimer {
-        background-color: #f2f2f2;
-        color: #000;
-        left: 0;
-        padding: 10px 10px 10px 10px;
-        position: fixed;
-        text-align: center;
-        bottom: 0;
-        width: 100%;
-        z-index: 15;
-        display: flex;
-        justify-content: space-around;
-        
-}
-
-.disclaimer .close{
-    padding: 2px;
-    border: 1px solid black;
-}
-   /* Navigation bar starts from here */
-
-
-.nd{
+    background-color: #fff;
+    color: #000;
+    padding: 0;
+    position: fixed;
+    text-align: center;
+    bottom: 10px;
+    left: 34%;
+    width: 30%;
+    height: 30%;
+    z-index: 15;
     display: flex;
-    justify-content: right;
-    margin-right: 3rem;
-    padding: 5px;
-    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-around;    
+    align-content: center;
+    align-items: center;
+    border-radius: 20px;
+    flex-direction: column;
+    background-color: grey;
+    color: orange;
+    box-shadow: 0 0px 15px 5px  black;
+}
+.disclaimer h3{
+    position: relative;
+    bottom: 0px;
+    top: 25px;
 }
 
-.n{
-    padding-left: 1rem;
-    margin-right: 1rem;
+.disclaimer .child-disclaimer button:nth-child(1){
+    background: #fff;
+    border: 2px solid black ;
+    border-radius: 10px;
+    padding: 5px 16px 5px 16px;
+    background: #fff;
+    border: 1px solid orange;
+}
+
+.disclaimer .child-disclaimer button:nth-child(2){
+    background: #fff;
+    border: 2px solid black ;
+    border-radius: 10px;
+    padding: 5px 15px 5px 15px;
+    border: 1px solid orange;
+    background-color: orange;
+    color: #000;
+
+}
+
+
+
+.disclaimer .child-disclaimer button{
+    margin: 10px;
 }
 
 
@@ -219,12 +237,14 @@ th,td{
     text-align: center;
     border: transparent solid 5px;
     flex-direction: row;
+    box-shadow: 0 0 25px 0 rgba(98,98,97);
     
     
 }
-.new:hover{        /*//// HOVER USED ///*/
+.new:hover{      /*//// HOVER USED ///*/
     box-shadow: 0 0 25px 0 rgba(98,98,97);
 }
+
 .new h1{
     text-align: center;
     display: flex;
@@ -233,17 +253,26 @@ th,td{
     align-content: center ;
     flex-direction: column;
     text-decoration: underline;
+    position: relative;
+    left: 5px;
 }
 .new .logo{
     width: 4rem;
-    height: 5rem;
-    padding: 4rem;
+    height: 4rem;
+    padding: 3rem;
     margin: 2rem ;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
+    box-shadow: 0 0 25px 0 rgb(98, 97, 97);
+}
+
+
+.new .logo a img{
+    width: 4rem;
+    height: 3rem;
 }
 
 .new .logo:hover{         /*//// HOVER USED ///*/
@@ -289,6 +318,7 @@ th,td{
 }
 
 .newcontainer{
+    width: screen;
     margin-top: 5rem;
     font-family: Calibri, Helvetica, sans-serif;
     background: lightblue;
@@ -343,42 +373,80 @@ input[type=password]{
     border-radius: 10px;
     font-size: 16px;
 }
-.signup{
-    width: 18rem;
-    padding: 13px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    background: #f1f1f1;
+.submit-button{
+    width: 17rem;
+    height: 3rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: #fff;
+}
+
+.submit-button:hover{
+    background: #4f1eff;
+    border: 2px solid #fff;
+    color: #fff;
     border-radius: 10px;
 }
-.signup:hover{
-    background: #4f1eff;
-    color: #f1f1f1;
-    font-size: 20px;
-    transition: 0.3s;
-    
-}
+
+
+
             /* media started */
 
 @media only screen and (max-width:600px){
-.welcome{
-    flex-direction: column;
-}
+    .welcome{
+        flex-direction: column;
+    }
 
-.new {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+    .header{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .header .navbar{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .disclaimer{
+        z-index: 15;
+        margin: auto;
+        left: 100px;
+        height: 20%;
+        bottom: 200px;
+        background-color: grey;
+        color: orange;
+        
+    }
+    .disclaimer .child-disclaimer{
+        display: flex;
+        flex-direction: row;
+        border-radius: none;
+    }
+
+    .disclaimer .child-disclaimer button:nth-child(1){
+        border-radius: 0;
+        border: 1px orange solid;
+        color: orange;
+        
+    }
+    .disclaimer .child-disclaimer button:nth-child(2){
+        border-radius: 0;
+        background-color: orange;
+        color: #000;
+        border: 1px orange solid;
+    }
  
-.footer{
-    flex-direction: column;
-}
-.detail{
-    margin-left: 0;
-}
-.disclaimer{
-    flex-direction: column;
-}
+    .footer{
+        flex-direction: column;
+    }
+
+    .detail{
+        margin-left: 0;
+    }
+    
+    .disclaimer{
+        flex-direction: column;
+    }
 
 }
