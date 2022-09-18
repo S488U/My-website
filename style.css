@@ -17,16 +17,24 @@ header{
     border: 2px solid black;
     display: flex;
     justify-content: space-around;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
 }
 
 header .side-profile{
     display: flex;
     flex-direction: row;
+    animation: text-shadow 300ms infinite ease-out;
 }
 
 header .side-profile .logo img {
+    top: 32px;
     height: 50px;
     width: auto;
+    margin-top: 0.7rem;
 }
 
 header .side-profile .about h3{
@@ -40,8 +48,8 @@ header .side-profile .about h3{
 header .navbar ul {
 	display: flex;
 	flex-direction: row;
-	background-color:transparent;
-	padding: 5px 5px;
+	background-color: transparent;
+	padding: 5px;
 	font-size: 19px;
 }
 
@@ -49,12 +57,42 @@ header .navbar ul li {
     width: max-content;
     margin-right: 15px;
 }
+header .navbar ul li:hover{
+    padding: 1px;
+    transition: 300ms;
+    font-size: 21px;
+    text-shadow: 0px 0px 10px black;
+
+} 
+@keyframes text-shadow {
+    50% {}
+    100% { text-shadow: 0 0 3px #FF0000}
+}
 
 header .navbar ul li a .svgicon{
     position: relative;
     bottom: -3px;
 }
 
+.burger-parent {
+    position: relative;
+    top: 25px;
+    display: none;
+
+}
+.burger-child{
+    width: 5px;
+    height: 5px;
+    background-color: #000;
+    margin: 5px;
+    padding: 0;
+    border-radius: 100px;
+    align-items: center;
+}
+
+main{
+    margin-top: 10rem;
+}
 /*=========== Disclaimer=========*/
 .disclaimer {
     background-color: #fff;
@@ -100,7 +138,6 @@ header .navbar ul li a .svgicon{
     border: 1px solid orange;
     background-color: orange;
     color: #000;
-
 }
 
 
@@ -398,14 +435,25 @@ input[type=password]{
         flex-direction: column;
     }
 
-    .header{
+    header{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         overflow: hidden;
     }
-    .header .navbar{
+
+    header .side-profile{
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+    .burger-parent{
+        display: block;
+
+    }
+
+    header .navbar{
+        display: none;
     }
     
     .disclaimer{
@@ -416,6 +464,7 @@ input[type=password]{
         bottom: 200px;
         background-color: grey;
         color: orange;
+        padding: 15px;
         
     }
     .disclaimer .child-disclaimer{
@@ -447,6 +496,19 @@ input[type=password]{
     
     .disclaimer{
         flex-direction: column;
+    }
+
+    .new{
+        flex-direction: column;
+        padding-bottom: 2rem;
+    }
+
+    .new .logo {
+        margin: auto;
+        margin-top: 2rem;
+        text-align: center;
+        align-items: center;
+        align-content: center;
     }
 
 }
