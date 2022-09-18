@@ -11,7 +11,7 @@ function openPage(){
     
     switch(x){
         case "hashiq":
-            window.open("second.html");
+            window.open("error.html");
             break;
         
         case "youtube":
