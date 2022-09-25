@@ -1,0 +1,5 @@
+ if (x === "hashiq"){
+             window.open("/error.html");
+            }else{
+                window.open("https://www.google.com/search?q=" + document.getElementById("search").value);
+            }
